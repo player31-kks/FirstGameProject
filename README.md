@@ -1,1 +1,6 @@
-# LightYearsGame
+# FirstGameProject
+
+### using
+c++
+CMAKE
+SFML
