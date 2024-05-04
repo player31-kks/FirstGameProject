@@ -31,6 +31,7 @@ namespace ly
 	weak<WorldType> Application::LoadWorld() {
 		shared<WorldType> newWorld{ new WorldType{this} };
 		currentWorld = newWorld;
+		currentWorld->BeginPlayInternal();
 		return newWorld;
 	}
 }
