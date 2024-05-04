@@ -17,7 +17,7 @@ namespace ly
 	{
 		mTickClock.restart();
 		float accumulatedTime = 0.f;
-		float targetDelatTime = 1.f / mTargetFrameRate;
+		const float targetDelatTime = 1.f / mTargetFrameRate;
 		while (mWindow.isOpen()) {
 			sf::Event windowEvent;
 			while (mWindow.pollEvent(windowEvent))
@@ -34,13 +34,11 @@ namespace ly
 				TickInternal(targetDelatTime);
 				RenderInternal();
 			}
-			LOG("ticking at frameter : %f", 1.f / frameDeltaTime);
 		}
 	}
-	void Application::TickInternal(float deltaTime)
+	void Application::TickInternal(const float deltaTime)
 	{
 		Tick(deltaTime);
-
 		if (currentWorld) {
 			currentWorld->TickInternal(deltaTime);
 		}
