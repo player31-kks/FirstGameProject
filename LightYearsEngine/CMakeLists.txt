@@ -6,10 +6,17 @@
 add_library (${LIGHT_YEARS_ENGINE_TARGET_NAME} STATIC
 	"src/framework/Application.cpp"
 	"include/framework/Application.h"
-	"include/EntryPoint.h" "src/EntryPoint.cpp" 
+	"include/EntryPoint.h" 
+	"src/EntryPoint.cpp" 
 	"include/framework/Core.h" 
 	"src/framework/Core.cpp" 
-	"src/framework/World.cpp")
+	"src/framework/World.cpp" 
+	"src/framework/Actor.cpp" 
+	"include/framework/Actor.h"
+
+	"include/framework/Object.h" 
+	"src/framework/Object.cpp"
+ "include/framework/AssetManager.h" "src/framework/AssetManager.cpp" "include/framework/MathUtil.h" "src/framework/MathUtil.cpp")
 target_include_directories(${LIGHT_YEARS_ENGINE_TARGET_NAME} PUBLIC 
 	"./include"
 )
